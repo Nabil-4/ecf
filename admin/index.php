@@ -53,8 +53,6 @@ if ((isset($_SESSION['super-admin']) || isset($_SESSION['good-admin']))) {
     <label for="email">E-mail</label>
     <input type="email" name="email" id="email">
 
-    <span>Mot de passe oublié</span>
-
     <input type="submit" value="Se connecter">
 </form>
 
@@ -103,8 +101,8 @@ foreach ($result as $key => $admin) {
             </div>
         <?php endif ?>
     <?php endif ?>
-
-    <div>
-        <a href="../index">Retour boutique</a>
-    </div>
 <?php endif ?>
+
+<div>
+    <a href="../index">Retour boutique</a>
+</div>
