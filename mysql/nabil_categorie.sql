@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 25 mai 2023 à 14:32
+-- Généré le : mar. 30 mai 2023 à 14:49
 -- Version du serveur : 8.0.31
 -- Version de PHP : 8.0.26
 
@@ -24,24 +24,27 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `tags`
+-- Structure de la table `nabil_categorie`
 --
 
-DROP TABLE IF EXISTS `tags`;
-CREATE TABLE IF NOT EXISTS `tags` (
+DROP TABLE IF EXISTS `nabil_categorie`;
+CREATE TABLE IF NOT EXISTS `nabil_categorie` (
   `id` int UNSIGNED NOT NULL AUTO_INCREMENT,
-  `tag` varchar(20) DEFAULT NULL,
+  `categorie` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `tag` (`tag`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
+  UNIQUE KEY `categorie` (`categorie`)
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb3;
 
 --
--- Déchargement des données de la table `tags`
+-- Déchargement des données de la table `nabil_categorie`
 --
 
-INSERT INTO `tags` (`id`, `tag`) VALUES
-(1, 'sucre'),
-(2, 'sale');
+INSERT INTO `nabil_categorie` (`id`, `categorie`) VALUES
+(4, 'alcool'),
+(5, 'aperitif'),
+(6, 'biscuits-et-douceurs'),
+(7, 'huile-dolive'),
+(8, 'miels');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
