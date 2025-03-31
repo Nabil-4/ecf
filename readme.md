@@ -1,4 +1,4 @@
-# Esprit Crétois - Backend PHP CRUD
+# Esprit Crétois - backend php crud
 
 Ce projet est une application backend en PHP qui implémente des opérations CRUD (Créer, Lire, Mettre à jour, Supprimer) pour gérer les données du site (projet cours).
 
