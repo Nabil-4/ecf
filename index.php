@@ -1,4 +1,4 @@
-<?php 
+<?php
 ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
@@ -10,12 +10,6 @@ if ($_GET) {
     $page = $_GET["page"];
 
     switch ($page) {
-        case "acceuil":
-            $page = "acceuil.php";
-            break;
-        case "blog":
-            $page = "blog.php";
-            break;
         case "boutique":
             $page = "boutique.php";
             break;
@@ -26,15 +20,15 @@ if ($_GET) {
             $page = "panier.php";
             break;
         default:
-        $page = "acceuil.php";
+            $page = "acceuil.php";
     }
 } else {
-    $page = "acceuil.php";
+    $page = "boutique.php";
 }
 ?>
 
 <?php require_once "pages/parts/header.php"; ?>
 
-<?php include_once "pages/".$page ?>
+<?php include_once "pages/" . $page ?>
 
 <?php require_once "pages/parts/footer.html"; ?>

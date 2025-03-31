@@ -1,23 +1,25 @@
 <?php session_start(); ?>
 
-<?php // require_once "../pages/parts/header.html"; ?>
+<?php // require_once "../pages/parts/header.html"; 
+?>
 
-<?php if (isset($_SESSION['super-admin']) || isset($_SESSION['good-admin'])): ?>
-    
+<?php if (isset($_SESSION['super-admin']) || isset($_SESSION['good-admin'])) : ?>
+
     <?php if (isset($_SESSION['super-admin'])) {
         $id = $_SESSION['super-admin'][0];
     } ?>
-         
+
     <?php if (isset($_SESSION['good-admin'])) {
-       $id = $_SESSION['good-admin'][0] ;
-    } ?> 
-    
+        $id = $_SESSION['good-admin'][0];
+    } ?>
+
     <style>
         ul {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
         }
+
         li {
             list-style: none;
             border: 1px solid #12247a;
@@ -36,7 +38,7 @@
         }
     </style>
 
-    <h1>Bonjour <?=$id?></h1>
+    <h1>Bonjour <?= $id ?></h1>
     <h3>Que voulez-vous faire ?</h3>
 
     <div>
@@ -50,24 +52,20 @@
             <li><a href="add_tag.php">Ajouter un tag</a></li>
             <li><a href="liste_tag.php">Modifier un tag</a></li>
             <li><a href="liste_tag.php">Supprimer un tag</a></li>
-            <?php if (isset($_SESSION['super-admin'])): ?>
+            <?php if (isset($_SESSION['super-admin'])) : ?>
                 <li><a href="liste_connexion.php">Listes des connexions</a></li>
             <?php endif ?>
         </ul>
     </div>
 
     <br>
-    <a href="index.php" style="color: black">DECONNECTION</a>
+    <a href="index.php" style="color: black">Déconnexion</a>
     <br>
     <br>
     <a href="../index" style="color: black">Retour boutique</a>
 
-    <?php // require_once "../pages/parts/footer.html" ?> 
-    <?php else: ?>
-        <?php header('location:index.php') ?>
+    <?php // require_once "../pages/parts/footer.html" 
+    ?>
+<?php else : ?>
+    <?php header('location:index.php') ?>
 <?php endif ?>
-
-
-
-
-
